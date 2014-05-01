@@ -1,0 +1,16 @@
+﻿@model List<ToDoListD.Models.task>
+<table id="tasksTable">
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td style="visibility: hidden">@item.id</td>
+            <td class="td_taskText" id="tr_@item.id" onmouseover="changeColor('#EEE','tr_@item.id');" onmouseout="changeColor('white','tr_@item.id');">@item.TaskText</td>
+            <td><a href="~/Views/Home/addTask" class="deleteTaskLink" id="deleteTaskLink_@item.id"><img src="~/Content/images/delete.png" width="20px" height="20px"/></a></td>
+            <td><a href="~/Views/Home/addTask" class="editTaskLink" id="editTaskLink_@item.id"><img src="~/Content/images/edit.png"   width="15px" height="15px"/></a></td>
+            <td><a href="~/Views/Home/addTask" class="incPriorityLink" id="incPriorityLink_@item.id"><img src="~/Content/images/up.png"   width="15px" height="15px"/></a></td>
+            <td><a href="~/Views/Home/addTask" class="decPriorityLink" id="decPriorityLink_@item.id"><img src="~/Content/images/down.png"   width="15px" height="15px"/></a></td>
+        </tr>
+                        
+    }
+</table>
+

@@ -1,0 +1,179 @@
+﻿body {
+    width: 1000px;
+    height: 2000px;
+    font-size: .85em;
+    font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;
+    color: #000;
+    background-color: #FFF;
+    margin: auto;
+}
+
+header, footer, nav, section {
+    display: block;
+}
+
+/*my styles*/
+
+body
+{
+    background-image: url('images/2.jpg');
+    height: 800px;
+}
+
+
+
+#home
+{
+    border-bottom-left-radius:15px;
+    border-bottom-right-radius:15px;
+    border-top-left-radius:15px;
+    border-top-right-radius:15px;
+    margin-top:100px;
+    margin-left:auto;
+    margin-right:auto;
+    width:800px;
+    height:300px;
+    background-color: inherit;
+    
+}
+
+
+#topBlock
+{
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    position: relative;
+    left: 0px;
+    top: 0px;
+    width: 800px;
+    height: 50px;
+    background-image: url('images/3.jpg');
+}
+
+#addBlock
+{
+    position: relative;
+    left: 0px;
+    top: 0px;
+    width: 800px;
+    height: 40px;
+    background-color: #B4B4B4;
+}
+
+#mainBlock
+{
+    border-bottom-left-radius:15px;
+    border-bottom-right-radius:15px;
+    border-top-left-radius:0px;
+    border-top-right-radius:0px;
+    position: relative;
+    left: 0px;
+    top: 0px;
+    width:800px;
+    height: 210px;
+    background-color: white;
+    padding-top:10px;
+    padding-bottom:10px;
+}
+
+#addButton
+{
+    width: 100px;
+}
+
+#addTaskTable
+{
+    position:relative;
+    margin:auto;
+    top: 5px;
+}
+
+#tasksTable
+{
+    
+    position:relative;
+    left:30px;
+    border-collapse:collapse;
+}
+
+.td_taskText
+{
+    width: 583px;
+    border-left: 1px solid #CACACA;
+    border-right: 1px solid #CACACA;
+    padding-left:10px;
+    padding-right:10px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+#editTable
+{
+    margin:-10px;
+    padding:0px;
+}
+
+h1
+{
+    position: relative;
+    top: 13px;
+    color: white;
+    text-align: center;
+    font-family: Aparajita;
+    font-size: 23px;
+}
+
+
+/**/
+
+/* Styles for basic forms
+-----------------------------------------------------------*/
+fieldset {
+    border: 1px solid #ddd;
+    padding: 0 1.4em 1.4em 1.4em;
+    margin: 0 0 1.5em 0;
+}
+
+legend {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+textarea {
+    min-height: 75px;
+}
+
+.editor-label {
+    margin: 1em 0 0 0;
+}
+
+.editor-field {
+    margin: 0.5em 0 0 0;
+}
+
+
+/* Styles for validation helpers
+-----------------------------------------------------------*/
+.field-validation-error {
+    color: #f00;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+.input-validation-error {
+    border: 1px solid #f00;
+    background-color: #fee;
+}
+
+.validation-summary-errors {
+    font-weight: bold;
+    color: #f00;
+}
+
+.validation-summary-valid {
+    display: none;
+}

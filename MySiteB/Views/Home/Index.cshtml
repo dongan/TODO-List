@@ -1,0 +1,70 @@
+﻿@model string
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+
+    <script src="~/Scripts/jquery-1.7.1.js"></script>
+    <script src="~/Scripts/myFunctions.js"></script>
+    <script type="text/javascript" src="flowplayer/flowplayer-3.2.2.min.js"></script>
+    <script type="text/javascript" src="@Url.Content("~/scripts/ajaxFunctions.js")"></script>
+
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+
+
+</head>
+<body>
+    
+    <div id="main">
+        <div id="home">
+
+            <div id="topBlock">
+                <h1>TODO List</h1>
+            </div>
+           
+             <div id="addBlock">
+
+                <form method="post" id="addTaskForm" action="@Url.Action("editTasks")">
+                    <table id="addTaskTable">
+                        <tr>
+                            <td>@Html.TextBox("idTextBox","",new {style="visibility: hidden;  width:0px"})</td>
+                            <td>@Html.TextBox("stateTextBox","",new {style="visibility: hidden;  width:0px"})</td>
+                            <td>@Html.TextBox("addTask","",new {style="width:600px"})</td>
+                            <td> <input type="submit" id="addButton" value="Add" /></td>
+                        </tr>
+                    </table>
+                </form>
+
+            </div>
+            <div id="mainBlock">
+                <table id="tasksTable">
+                    @foreach (var item in ViewBag.tasks)
+                    {
+                        <tr>
+                            <td  style="visibility:hidden">@item.id</td>
+                            <td class="td_taskText" id="tr_@item.id" onmouseover="changeColor('#EEE','tr_@item.id');" onmouseout="changeColor('white','tr_@item.id');">@item.TaskText</td>
+                            <td><a href="~/Views/Home/addTask" class="deleteTaskLink" id="deleteTaskLink_@item.id"><img src="~/Content/images/delete.png" width="20px" height="20px"/></a></td>
+                            <td><a href="~/Views/Home/addTask" class="editTaskLink" id="editTaskLink_@item.id"><img src="~/Content/images/edit.png"   width="15px" height="15px"/></a></td>
+                            <td><a href="~/Views/Home/addTask" class="incPriorityLink" id="incPriorityLink_@item.id"><img src="~/Content/images/up.png"   width="15px" height="15px"/></a></td>
+                            <td><a href="~/Views/Home/addTask" class="decPriorityLink" id="decPriorityLink_@item.id"><img src="~/Content/images/down.png"   width="15px" height="15px"/></a></td>
+                        </tr>
+                        
+                    }
+                </table>
+            </div>
+        </div>
+
+
+
+
+
+    </div>
+
+
+
+</body>
+</html>
