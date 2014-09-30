@@ -1,0 +1,20 @@
+﻿@model List<ToDoList.Models.Task>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index2</h2>
+<table>
+
+@foreach (var item in Model)
+{
+    <tr>
+        <td>@item.id</td>
+        <td>@item.task</td>
+        <td>@item.priority</td>
+    </tr>
+}
+
+</table>
+
